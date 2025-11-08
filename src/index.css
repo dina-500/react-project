@@ -1,0 +1,56 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap');
+
+/* استيراد Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* تنسيقات أساسية */
+body {
+  font-family: 'Cairo', sans-serif;
+}
+/* ============================================
+   Animations
+============================================ */
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@layer utilities {
+  .animate-zoomIn {
+    animation: zoomIn 0.5s forwards;
+  }
+
+  .animate-scaleUp {
+    animation: scaleUp 0.3s ease-in-out forwards;
+  }
+}
+
+/* ============================================
+   Example Responsive Helpers (اختياري)
+============================================ */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
